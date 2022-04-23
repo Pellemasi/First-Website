@@ -1,0 +1,117 @@
+:root {
+  --darkestColor: #232627;
+  --darkColor: #32373b;
+  --lightColor: #677e85;
+  --textColor: #f8eee6;
+  --shadowColor: #03030359;
+}
+
+body {
+  margin: 0;
+  background: var(--darkestColor);
+  color: var(--textColor);
+  font-family: 'Montserrat';
+}
+
+.homeNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+  font-size: 2em;
+}
+
+.homeNav a {
+  padding: 0.3em 0.9em 0.5em 0.4em;
+  background: var(--lightColor);
+  text-decoration: none;
+  color: var(--textColor);
+  font-weight: bold;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0px 4px 12px var(--shadowColor);
+          box-shadow: 0px 4px 12px var(--shadowColor);
+  cursor: pointer;
+}
+
+.homeNav .homeButton {
+  border-radius: 0 0 1em 0;
+  position: fixed;
+}
+
+.homeNav .contactButton {
+  display: none;
+  border-radius: 0 0 0 1em;
+}
+
+.hero {
+  font-size: 1.4em;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  place-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -3em 2.4em 2em 5.5em;
+  background: var(--darkColor);
+  border-radius: 0px 0px 2em 2em;
+}
+
+.hero h1 {
+  margin-top: 2.3em;
+  margin-bottom: -0.2em;
+  margin: 2.3em 1em -0.2em 1em;
+  text-transform: capitalize;
+}
+
+.hero p {
+  margin-bottom: 1.5em;
+  padding: 0 2em 0 2em;
+}
+
+.artworks ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.artworks ul li {
+  background: var(--darkColor);
+  padding-top: 3px;
+  margin-bottom: 2em;
+  border-radius: 2em 2em 0 0;
+}
+
+.artworks ul li p {
+  margin-left: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.artworks ul li img {
+  width: 100%;
+}
+
+.artworks ul li iframe {
+  width: 100%;
+  height: 35em;
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero {
+    margin: -3em 8em 2em 8em;
+  }
+  .artworks ul li {
+    margin: 0 20em 4em 20em;
+  }
+  .artworks ul li iframe {
+    width: 100%;
+    height: 900px;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (min-width: 2200px) {
+  .artworks ul li {
+    margin: 0 35em 4em 35em;
+  }
+}
+/*# sourceMappingURL=artworkStyles.css.map */

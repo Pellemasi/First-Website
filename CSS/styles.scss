@@ -1,0 +1,237 @@
+:root {
+  --darkestColor: #232627;
+  --darkColor: #32373b;
+  --lightColor: #677e85;
+  --textColor: #f8eee6;
+  --shadowColor: #030303;
+}
+// Hide horizontal scroll bar... Yes, I know.
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+// don't judge me
+body {
+  background: var(--darkestColor);
+  color: var(--textColor);
+  margin: 0;
+  font-family: 'Montserrat';
+}
+
+//navigation bar
+
+.navigation {
+  background: var(--darkColor);
+  height: 5em;
+
+  padding: 1em;
+  box-shadow: 0px 4px 24px var(--shadowColor);
+
+  nav {
+    //display or hide mobile menu
+    display: none;
+    z-index: 999;
+    background: var(--darkColor);
+    width: 100%;
+    box-shadow: 0px 4px 24px var(--shadowColor);
+    border-radius: 2em;
+    text-decoration: none;
+    img {
+      float: right;
+      padding: 2em;
+    }
+    ul {
+      margin-top: 2em;
+      text-decoration: none;
+      li {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 2em;
+        margin: 2em 1.5em 2em 0;
+        list-style-type: none;
+        text-align: center;
+        a {
+          text-decoration: none;
+        }
+        a:visited {
+          color: var(--textColor);
+        }
+      }
+    }
+  }
+  .container {
+    display: flex;
+    place-content: space-between;
+    //box to push menu button
+    img {
+      display: flex;
+    }
+  }
+}
+
+//profile section
+
+.hero {
+  display: flex;
+  place-content: center;
+  align-items: center;
+
+  .container {
+    background: var(--darkColor);
+    margin: 0 2em 5em 2em;
+    border-radius: 0px 0px 3em 3em;
+    width: 60em;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    padding: 0 2em 0 2em;
+    transition-duration: 0.4s;
+    img {
+      display: flex;
+      place-content: center;
+      align-items: center;
+      height: 20em;
+      border-radius: 50%;
+      margin-top: -5em;
+      border: 2em solid var(--darkestColor);
+      box-shadow: 0px 4px 24px var(--shadowColor);
+    }
+    h1 {
+      display: flex;
+      place-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2em;
+      text-transform: uppercase;
+    }
+    ul {
+      font-size: 1.5em;
+      font-weight: 400;
+      border-radius: 0;
+    }
+  }
+}
+
+// Artwork Listings
+
+.artworks {
+  ul {
+    display: grid;
+    place-content: center;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+      margin-left: -2.5em;
+      display: flex;
+      place-content: center;
+      align-items: center;
+      border-radius: 2em;
+      margin-bottom: 2em;
+
+      p {
+      }
+
+      a {
+        display: grid;
+        place-content: center;
+        align-items: center;
+        background: var(--darkColor);
+        border-radius: 1em;
+        width: 90%;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        &:hover {
+          box-shadow: 0px 4px 24px var(--shadowColor);
+          flex-grow: 1em;
+        }
+        p {
+          display: block;
+          text-align: center;
+          font-size: 1.6em;
+          font-weight: bold;
+          text-transform: uppercase;
+
+          color: var(--textColor);
+        }
+        img {
+          border-radius: 1em;
+          border: 0em solid var(--darkColor);
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #navigationBar {
+    display: grid;
+    .container {
+      border-radius: 5em;
+    }
+
+    #openMenu {
+      display: none;
+    }
+    #mobiiliMenu {
+      display: block;
+      margin-top: -5em;
+
+      li {
+        a {
+          padding-left: 1em;
+        }
+      }
+      .firstLinks {
+        display: flex;
+        float: left;
+      }
+      .secondLinks {
+        display: flex;
+        float: right;
+      }
+      background: none;
+      box-shadow: none;
+      #mobileExit {
+        display: none;
+      }
+    }
+  }
+
+  //hero
+  .hero {
+    .container {
+      border-radius: 0px 0px 50em 50em;
+      .heroContainer {
+        h1 {
+          text-align: center;
+        }
+        ul {
+          padding-right: 2em;
+          list-style-type: none;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  //artwork listing
+  .artworks {
+    .artworkListing {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        a {
+          width: 25em;
+        }
+        margin: 0.8em;
+        img {
+          size: inherit;
+        }
+      }
+    }
+  }
+}
