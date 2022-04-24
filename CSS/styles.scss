@@ -19,14 +19,49 @@ body {
   font-family: 'Montserrat';
 }
 
+//3D Background thingies
+.background {
+  .background3Delements {
+    background-color: var(--darkestColor);
+    position: absolute;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300%;
+    z-index: 1;
+    perspective: 1em;
+    .testPlane {
+      position: relative;
+      background-color: var(--darkColor);
+      padding: 7em;
+      border-radius: 50%;
+      margin: 5em;
+      width: 15em;
+      height: 15em;
+      transform: translateY(-20em) translateX(30em) rotateX(23deg);
+    }
+    .testPlaner {
+      position: absolute;
+      background-color: var(--lightColor);
+      padding: 10em;
+      border-radius: 2em;
+      margin: 5em;
+      width: 40em;
+
+      transform: rotateX(90deg);
+    }
+  }
+}
 //navigation bar
 
 .navigation {
   background: var(--darkColor);
   height: 5em;
-
+  position: relative;
   padding: 1em;
   box-shadow: 0px 4px 24px var(--shadowColor);
+  z-index: 550;
 
   nav {
     //display or hide mobile menu
@@ -88,6 +123,7 @@ body {
     align-items: center;
     padding: 0 2em 0 2em;
     transition-duration: 0.4s;
+    z-index: 550;
     img {
       display: flex;
       place-content: center;
@@ -130,7 +166,7 @@ body {
       align-items: center;
       border-radius: 2em;
       margin-bottom: 2em;
-
+      z-index: 550;
       p {
       }
 

@@ -19,12 +19,54 @@ body {
   font-family: 'Montserrat';
 }
 
+.background .background3Delements {
+  background-color: var(--darkestColor);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 300%;
+  z-index: 1;
+  -webkit-perspective: 1em;
+          perspective: 1em;
+}
+
+.background .background3Delements .testPlane {
+  position: relative;
+  background-color: var(--darkColor);
+  padding: 7em;
+  border-radius: 50%;
+  margin: 5em;
+  width: 15em;
+  height: 15em;
+  -webkit-transform: translateY(-20em) translateX(30em) rotateX(23deg);
+          transform: translateY(-20em) translateX(30em) rotateX(23deg);
+}
+
+.background .background3Delements .testPlaner {
+  position: absolute;
+  background-color: var(--lightColor);
+  padding: 10em;
+  border-radius: 2em;
+  margin: 5em;
+  width: 40em;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
 .navigation {
   background: var(--darkColor);
   height: 5em;
+  position: relative;
   padding: 1em;
   -webkit-box-shadow: 0px 4px 24px var(--shadowColor);
           box-shadow: 0px 4px 24px var(--shadowColor);
+  z-index: 550;
 }
 
 .navigation nav {
@@ -104,6 +146,7 @@ body {
   padding: 0 2em 0 2em;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
+  z-index: 550;
 }
 
 .hero .container img {
@@ -162,6 +205,7 @@ body {
           align-items: center;
   border-radius: 2em;
   margin-bottom: 2em;
+  z-index: 550;
 }
 
 .artworks ul li a {
