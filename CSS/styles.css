@@ -41,6 +41,7 @@ body {
 .navigation nav img {
   float: right;
   padding: 2em;
+  z-index: 999;
 }
 
 .navigation nav ul {
